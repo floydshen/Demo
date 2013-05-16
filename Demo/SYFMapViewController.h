@@ -15,6 +15,8 @@
 #	define DLog(...)
 #endif
 
+#define ARC4RANDOM_MAX 0x100000000
+
 @interface SYFMapViewController : UIViewController
 
 @end

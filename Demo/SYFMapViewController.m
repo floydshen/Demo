@@ -44,6 +44,10 @@
 //    CLLocationCoordinate2D coordinate = LLocationManager.
 //    [self.mapView setRegion:MKCoordinateRegionMake(coordinate, MKCoordinateSpanMake(DEFAULT_MAP_SPAN, DEFAULT_MAP_SPAN)) animated:YES];
     
+//    OCMapViewSampleHelpAnnotation *annotation = [[OCMapViewSampleHelpAnnotation alloc] initWithCoordinate:loc.coordinate];
+//    [annotationsToAdd addObject:annotation];
+    
+//    [self getLocation];
     
     [self.view addSubview:self.mapView];
     
@@ -156,6 +160,23 @@ fromOldState:(MKAnnotationViewDragState)oldState
 - (void)mapView:(MKMapView *)mapView didChangeUserTrackingMode:(MKUserTrackingMode)mode animated:(BOOL)animated
 {
     NSLog(@"****************didChangeUserTrackingMode");
+}
+
+- (CLLocation *)getLocation
+{
+    // Get random coordinates
+    CLLocationDistance latitude = ((float)arc4random() / ARC4RANDOM_MAX) * 180.0 - 90.0;    // the latitude goes from +90° - 0 - -90°
+    CLLocationDistance longitude = ((float)arc4random() / ARC4RANDOM_MAX) * 360.0 - 180.0;  // the longitude goes from +180° - 0 - -180°
+    
+    // This is a fix, because the randomizing above can fail
+    latitude = MIN(90.0, latitude);
+    latitude = MAX(-90.0, latitude);
+    
+    longitude = MIN(180.0, longitude);
+    longitude = MAX(-180.0, longitude);
+    
+    CLLocation *loc = [[CLLocation alloc]initWithLatitude:latitude longitude:longitude];
+    return loc;
 }
 
 @end
