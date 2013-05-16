@@ -7,6 +7,7 @@
 //
 
 #import "SYFAppDelegate.h"
+#import "SYFIndexViewController.h"
 
 @implementation SYFAppDelegate
 
@@ -20,6 +21,9 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+    SYFIndexViewController *vc = [[[SYFIndexViewController alloc]init] autorelease];
+    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
+    self.window.rootViewController = self.navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
