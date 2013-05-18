@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE37E7EA1747CC950078273B /* SYFDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE37E7E91747CC950078273B /* SYFDefaultCell.m */; };
 		CED4914817471CC200EF833B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4914717471CC200EF833B /* UIKit.framework */; };
 		CED4914A17471CC200EF833B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4914917471CC200EF833B /* Foundation.framework */; };
 		CED4914C17471CC200EF833B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4914B17471CC200EF833B /* CoreGraphics.framework */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE37E7E81747CC950078273B /* SYFDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFDefaultCell.h; sourceTree = "<group>"; };
+		CE37E7E91747CC950078273B /* SYFDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYFDefaultCell.m; sourceTree = "<group>"; };
 		CED4914317471CC200EF833B /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4914717471CC200EF833B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CED4914917471CC200EF833B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +67,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE37E7E61747CBE20078273B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		CE37E7E71747CC3D0078273B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE37E7E81747CC950078273B /* SYFDefaultCell.h */,
+				CE37E7E91747CC950078273B /* SYFDefaultCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		CED4913817471CC200EF833B = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +144,7 @@
 		CED491811747242D00EF833B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE37E7E71747CC3D0078273B /* Cell */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -150,6 +170,7 @@
 		CED491851747246900EF833B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE37E7E61747CBE20078273B /* Utility */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -259,6 +280,7 @@
 				CED4915817471CC200EF833B /* SYFAppDelegate.m in Sources */,
 				CED4918A1747247900EF833B /* SYFIndexViewController.m in Sources */,
 				CED4918B1747247900EF833B /* SYFMapViewController.m in Sources */,
+				CE37E7EA1747CC950078273B /* SYFDefaultCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
