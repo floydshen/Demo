@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SYFAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+@interface SYFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UINavigationController *navigationController;
