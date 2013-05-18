@@ -8,11 +8,7 @@
 
 #import "SYFAppDelegate.h"
 #import "SYFIndexViewController.h"
-<<<<<<< HEAD
 #import "CoreLocation/CLLocationManager.h"
-=======
-#import "SYFMapViewController.h"
->>>>>>> e6d37e5d18b20d8bc77860194b5114db238e98ac
 
 @implementation SYFAppDelegate
 
@@ -26,7 +22,6 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-<<<<<<< HEAD
     
 //    CLLocationManager *manager = [[CLLocationManager alloc] init];
 //    [manager startUpdatingLocation];
@@ -34,30 +29,6 @@
     SYFIndexViewController *vc = [[[SYFIndexViewController alloc]init] autorelease];
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
     self.window.rootViewController = self.navigationController;
-=======
-    SYFIndexViewController *ivc = [[[SYFIndexViewController alloc]init] autorelease];
-    UINavigationController *indexNavController = [[[UINavigationController alloc] initWithRootViewController:ivc]autorelease];
-    
-    SYFMapViewController *mvc = [[[SYFMapViewController alloc]init] autorelease];
-    UINavigationController *mapNavController = [[[UINavigationController alloc] initWithRootViewController:mvc] autorelease];
-    
-    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    
-    UITabBarItem *indexItem = [[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:0] autorelease];
-    UITabBarItem *mapItem = [[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:0] autorelease];
-    
-    indexNavController.tabBarItem = indexItem;
-    mapNavController.tabBarItem = mapItem;
-    
-    self.tabBarController.viewControllers = @[indexNavController, mapNavController];
-    self.tabBarController.delegate = self;
-    
-    self.window.rootViewController = self.tabBarController;
-    self.tabBarController = self.tabBarController;
-    
-//    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:ivc] autorelease];
-//    self.window.rootViewController = self.navigationController;
->>>>>>> e6d37e5d18b20d8bc77860194b5114db238e98ac
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -90,12 +61,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-<<<<<<< HEAD
 
 #pragma mark - tabbar controller
-=======
-#pragma mark - tabBarController
->>>>>>> e6d37e5d18b20d8bc77860194b5114db238e98ac
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
@@ -110,33 +77,18 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController willBeginCustomizingViewControllers:(NSArray *)viewControllers
 {
-<<<<<<< HEAD
-=======
-#warning !!!
->>>>>>> e6d37e5d18b20d8bc77860194b5114db238e98ac
     NSLog(@"****************willBeginCustomizingViewControllers");
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController willEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
 {
-<<<<<<< HEAD
-=======
-#warning !!!
->>>>>>> e6d37e5d18b20d8bc77860194b5114db238e98ac
     NSLog(@"****************willEndCustomizingViewControllers");
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
 {
-<<<<<<< HEAD
     NSLog(@"****************didEndCustomizingViewControllers");
 }
 
 
-=======
-#warning !!!
-    NSLog(@"****************didEndCustomizingViewControllers");
-}
-
->>>>>>> e6d37e5d18b20d8bc77860194b5114db238e98ac
 @end
