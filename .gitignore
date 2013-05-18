@@ -5,6 +5,7 @@ build/
 *.mode2v3
 *.perspectivev3
 xcuserdata/
+Demo.xcodeproj/project.xcworkspace/
 
 # old skool
 .svn
