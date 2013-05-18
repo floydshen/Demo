@@ -21,6 +21,16 @@
     [super dealloc];
 }
 
+- (id)init
+{
+    if (self) {
+        // Custom initialization
+        self.title = NSLocalizedString(@"Map", @"Map Comment");
+    }
+    return self;
+}
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

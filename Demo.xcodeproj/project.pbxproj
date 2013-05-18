@@ -16,6 +16,12 @@
 		CED4915A17471CC200EF833B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CED4915917471CC200EF833B /* Default.png */; };
 		CED4915C17471CC200EF833B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED4915B17471CC200EF833B /* Default@2x.png */; };
 		CED4915E17471CC200EF833B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED4915D17471CC200EF833B /* Default-568h@2x.png */; };
+		CED4918A1747247900EF833B /* SYFIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED491871747247900EF833B /* SYFIndexViewController.m */; };
+		CED4918B1747247900EF833B /* SYFMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED491891747247900EF833B /* SYFMapViewController.m */; };
+		CED49191174724C200EF833B /* marker-orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED49190174724C200EF833B /* marker-orange@2x.png */; };
+		CED49193174724C900EF833B /* marker-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = CED49192174724C900EF833B /* marker-orange.png */; };
+		CED491951747266C00EF833B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED491941747266C00EF833B /* MapKit.framework */; };
+		CED491971747267600EF833B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED491961747267600EF833B /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,14 @@
 		CED4915917471CC200EF833B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CED4915B17471CC200EF833B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CED4915D17471CC200EF833B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CED491861747247900EF833B /* SYFIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFIndexViewController.h; sourceTree = "<group>"; };
+		CED491871747247900EF833B /* SYFIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYFIndexViewController.m; sourceTree = "<group>"; };
+		CED491881747247900EF833B /* SYFMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFMapViewController.h; sourceTree = "<group>"; };
+		CED491891747247900EF833B /* SYFMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYFMapViewController.m; sourceTree = "<group>"; };
+		CED49190174724C200EF833B /* marker-orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "marker-orange@2x.png"; path = "Images/2X/marker-orange@2x.png"; sourceTree = "<group>"; };
+		CED49192174724C900EF833B /* marker-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "marker-orange.png"; path = "Images/X/marker-orange.png"; sourceTree = "<group>"; };
+		CED491941747266C00EF833B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CED491961747267600EF833B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED491971747267600EF833B /* CoreLocation.framework in Frameworks */,
+				CED491951747266C00EF833B /* MapKit.framework in Frameworks */,
 				CED4914817471CC200EF833B /* UIKit.framework in Frameworks */,
 				CED4914A17471CC200EF833B /* Foundation.framework in Frameworks */,
 				CED4914C17471CC200EF833B /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +84,8 @@
 		CED4914617471CC200EF833B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CED491961747267600EF833B /* CoreLocation.framework */,
+				CED491941747266C00EF833B /* MapKit.framework */,
 				CED4914717471CC200EF833B /* UIKit.framework */,
 				CED4914917471CC200EF833B /* Foundation.framework */,
 				CED4914B17471CC200EF833B /* CoreGraphics.framework */,
@@ -78,6 +96,11 @@
 		CED4914D17471CC200EF833B /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				CED4918C1747248D00EF833B /* Resource */,
+				CED491851747246900EF833B /* Common */,
+				CED491841747243900EF833B /* Controller */,
+				CED491831747243400EF833B /* Model */,
+				CED491811747242D00EF833B /* View */,
 				CED4915617471CC200EF833B /* SYFAppDelegate.h */,
 				CED4915717471CC200EF833B /* SYFAppDelegate.m */,
 				CED4914E17471CC200EF833B /* Supporting Files */,
@@ -97,6 +120,71 @@
 				CED4915D17471CC200EF833B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CED491811747242D00EF833B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CED491831747243400EF833B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CED491841747243900EF833B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CED491861747247900EF833B /* SYFIndexViewController.h */,
+				CED491871747247900EF833B /* SYFIndexViewController.m */,
+				CED491881747247900EF833B /* SYFMapViewController.h */,
+				CED491891747247900EF833B /* SYFMapViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CED491851747246900EF833B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		CED4918C1747248D00EF833B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CED4918D1747249700EF833B /* Images */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		CED4918D1747249700EF833B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CED4918F174724B200EF833B /* 2X */,
+				CED4918E174724AB00EF833B /* X */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		CED4918E174724AB00EF833B /* X */ = {
+			isa = PBXGroup;
+			children = (
+				CED49192174724C900EF833B /* marker-orange.png */,
+			);
+			name = X;
+			sourceTree = "<group>";
+		};
+		CED4918F174724B200EF833B /* 2X */ = {
+			isa = PBXGroup;
+			children = (
+				CED49190174724C200EF833B /* marker-orange@2x.png */,
+			);
+			name = 2X;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +243,8 @@
 				CED4915A17471CC200EF833B /* Default.png in Resources */,
 				CED4915C17471CC200EF833B /* Default@2x.png in Resources */,
 				CED4915E17471CC200EF833B /* Default-568h@2x.png in Resources */,
+				CED49191174724C200EF833B /* marker-orange@2x.png in Resources */,
+				CED49193174724C900EF833B /* marker-orange.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +257,8 @@
 			files = (
 				CED4915417471CC200EF833B /* main.m in Sources */,
 				CED4915817471CC200EF833B /* SYFAppDelegate.m in Sources */,
+				CED4918A1747247900EF833B /* SYFIndexViewController.m in Sources */,
+				CED4918B1747247900EF833B /* SYFMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +367,7 @@
 				CED4916317471CC200EF833B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
