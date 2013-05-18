@@ -8,6 +8,7 @@
 
 #import "SYFAppDelegate.h"
 #import "SYFIndexViewController.h"
+#import "CoreLocation/CLLocationManager.h"
 
 @implementation SYFAppDelegate
 
@@ -21,6 +22,10 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+    
+//    CLLocationManager *manager = [[CLLocationManager alloc] init];
+//    [manager startUpdatingLocation];
+    
     SYFIndexViewController *vc = [[[SYFIndexViewController alloc]init] autorelease];
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
     self.window.rootViewController = self.navigationController;
@@ -55,5 +60,35 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+#pragma mark - tabbar controller
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    NSLog(@"****************shouldSelectViewController");
+    return YES;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    NSLog(@"****************didSelectViewController");
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController willBeginCustomizingViewControllers:(NSArray *)viewControllers
+{
+    NSLog(@"****************willBeginCustomizingViewControllers");
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController willEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
+{
+    NSLog(@"****************willEndCustomizingViewControllers");
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
+{
+    NSLog(@"****************didEndCustomizingViewControllers");
+}
+
 
 @end
