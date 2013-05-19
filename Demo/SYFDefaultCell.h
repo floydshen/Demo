@@ -10,4 +10,10 @@
 
 @interface SYFDefaultCell : UITableViewCell
 
+@property(nonatomic, strong) UILabel *title;
+@property(nonatomic, strong) UIImage *image;
+@property(nonatomic, strong) UIImageView *cellImageView;
+
+- (void)setCellInfo:(NSDictionary *)dict;
+
 @end

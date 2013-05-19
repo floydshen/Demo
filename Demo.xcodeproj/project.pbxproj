@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE37E7EA1747CC950078273B /* SYFDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE37E7E91747CC950078273B /* SYFDefaultCell.m */; };
+		CE531F74174863AF001F2E06 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CE531F73174863AF001F2E06 /* star.png */; };
 		CED4914817471CC200EF833B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4914717471CC200EF833B /* UIKit.framework */; };
 		CED4914A17471CC200EF833B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4914917471CC200EF833B /* Foundation.framework */; };
 		CED4914C17471CC200EF833B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4914B17471CC200EF833B /* CoreGraphics.framework */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		CE37E7E81747CC950078273B /* SYFDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFDefaultCell.h; sourceTree = "<group>"; };
 		CE37E7E91747CC950078273B /* SYFDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYFDefaultCell.m; sourceTree = "<group>"; };
+		CE531F73174863AF001F2E06 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = Images/star.png; sourceTree = "<group>"; };
 		CED4914317471CC200EF833B /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4914717471CC200EF833B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CED4914917471CC200EF833B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -195,6 +197,7 @@
 		CED4918E174724AB00EF833B /* X */ = {
 			isa = PBXGroup;
 			children = (
+				CE531F73174863AF001F2E06 /* star.png */,
 				CED49192174724C900EF833B /* marker-orange.png */,
 			);
 			name = X;
@@ -266,6 +269,7 @@
 				CED4915E17471CC200EF833B /* Default-568h@2x.png in Resources */,
 				CED49191174724C200EF833B /* marker-orange@2x.png in Resources */,
 				CED49193174724C900EF833B /* marker-orange.png in Resources */,
+				CE531F74174863AF001F2E06 /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

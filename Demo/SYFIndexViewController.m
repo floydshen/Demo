@@ -7,12 +7,15 @@
 //
 
 #import "SYFIndexViewController.h"
+#import "SYFDefaultCell.h"
 
 @interface SYFIndexViewController ()<UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *_objects;
 }
 
 @property(nonatomic, strong) UITableView *tableView;
+@property(nonatomic, strong) UITextField *textField;
+@property(nonatomic, strong) UIButton *button;
 
 @end
 
@@ -60,11 +63,27 @@
     UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)] autorelease];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    self.tableView = [[[UITableView alloc] initWithFrame:CGRectMake(0, 30, self.view.frame.size.width, self.view.frame.size.height-30)] autorelease];
+    // textField
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 5, 350, 45)];
+    self.textField.backgroundColor = [UIColor greenColor];
+    self.textField.font = [UIFont boldSystemFontOfSize:38];
     
+    // button
+    self.button = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.button.frame = CGRectMake(380, 5, 100, 45);
+    self.button.backgroundColor = [UIColor blueColor];
+    self.button.titleLabel.textColor = [UIColor blackColor];
+    self.button.titleLabel.font = [UIFont systemFontOfSize:25];
+    [self.button setTitle:@"Search" forState:UIControlStateNormal];
+    [self.button addTarget:self action:@selector(search:) forControlEvents:UIControlEventTouchUpInside];
+    
+    // tableView
+    self.tableView = [[[UITableView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height)] autorelease];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
 
+    [self.view addSubview:self.button];
+    [self.view addSubview:self.textField];
     [self.view addSubview:self.tableView];
 }
 
@@ -72,6 +91,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)search:(id)sender
+{
+    
+    
+    
 }
 
 - (void)insertNewObject:(id)sender
@@ -105,13 +131,16 @@
     NSLog(@"****************cellForRowAtIndexPath");
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    SYFDefaultCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[SYFDefaultCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell...
-    cell.textLabel.text = [_objects[indexPath.row] description];
+//    cell.textLabel.text = [_objects[indexPath.row] description];
+    NSDictionary *dict = @{@"title": [_objects[indexPath.row] description]};
+    [cell setCellInfo:dict];
+    
     return cell;
 }
 
