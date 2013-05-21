@@ -7,6 +7,7 @@
 //
 
 #import "SYFMapViewController.h"
+#import "SYFDefaultAnnotation.h"
 
 @interface SYFMapViewController () <MKMapViewDelegate>
 
@@ -61,6 +62,11 @@
     
     [self.view addSubview:self.mapView];
     
+    for (NSInteger i = 0; i < 100; i++) {
+        
+        
+        [self.mapView addAnnotation:@""];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,8 +85,19 @@
 {
     DLog(@"****************regionDidChangeAnimated:%d", [mapView.annotations count]);
 //    DLog(@"map region did changed, animated is %@", animated ? @"YES" : @"NO");
+    [self requestForDate];
+    
     
 }
+
+- (void)requestForDate
+{
+    // map api
+    
+}
+
+
+
 
 //_____________________________
 - (void)mapViewWillStartLoadingMap:(MKMapView *)mapView
