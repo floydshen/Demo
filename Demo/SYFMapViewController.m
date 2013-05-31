@@ -46,27 +46,27 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSLog([[NSString alloc] initWithFormat:@"---------height:%f, width:%f, x:%f, y:%f",self.view.bounds.size.height,self.view.bounds.size.width,self.view.bounds.origin.x, self.view.bounds.origin.y]);
+    NSLog(@"---------height:%f, width:%f, x:%f, y:%f",self.view.bounds.size.height,self.view.bounds.size.width,self.view.bounds.origin.x, self.view.bounds.origin.y);
     
     self.mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     self.mapView.delegate = self;
     self.mapView.showsUserLocation = YES;
-    
-//    CLLocationCoordinate2D coordinate = LLocationManager.
-//    [self.mapView setRegion:MKCoordinateRegionMake(coordinate, MKCoordinateSpanMake(DEFAULT_MAP_SPAN, DEFAULT_MAP_SPAN)) animated:YES];
-    
-//    OCMapViewSampleHelpAnnotation *annotation = [[OCMapViewSampleHelpAnnotation alloc] initWithCoordinate:loc.coordinate];
-//    [annotationsToAdd addObject:annotation];
-    
-//    [self getLocation];
-    
+
     [self.view addSubview:self.mapView];
     
-    for (NSInteger i = 0; i < 100; i++) {
+//    for (NSInteger i = 0; i < 100; i++) {
+        NSInteger i = rand_r(30);
+        NSInteger ii = rand_r(50);
         
-        
-        [self.mapView addAnnotation:@""];
-    }
+        CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(39.915352 - i,116.397105 - ii);
+        MKCoordinateSpan span = MKCoordinateSpanMake(0.012, 0.012);
+    
+        SYFDefaultAnnotation *da = [[SYFDefaultAnnotation alloc] initWithCoordinate:coords];
+    
+//        [self.mapView setRegion:region animated:NO];
+
+        [self.mapView addAnnotation:da];
+//    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,9 +95,6 @@
     // map api
     
 }
-
-
-
 
 //_____________________________
 - (void)mapViewWillStartLoadingMap:(MKMapView *)mapView

@@ -17,6 +17,7 @@
 
 #define ARC4RANDOM_MAX 0x100000000
 
-@interface SYFMapViewController : UIViewController
-
+@interface SYFMapViewController : UIViewController {
+    CLLocationManager *locationManager;
+}
 @end
