@@ -54,19 +54,15 @@
 
     [self.view addSubview:self.mapView];
     
-//    for (NSInteger i = 0; i < 100; i++) {
-        NSInteger i = rand_r(30);
-        NSInteger ii = rand_r(50);
+    for (NSInteger i = 0; i < 100; i++) {
+        NSInteger n = i*0.001;
+        NSInteger nn = i*0.0015;
         
-        CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(39.915352 - i,116.397105 - ii);
-        MKCoordinateSpan span = MKCoordinateSpanMake(0.012, 0.012);
-    
-        SYFDefaultAnnotation *da = [[SYFDefaultAnnotation alloc] initWithCoordinate:coords];
-    
-//        [self.mapView setRegion:region animated:NO];
-
-        [self.mapView addAnnotation:da];
-//    }
+        CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(39.915352 - n,116.397105 - nn);
+        MKPointAnnotation *ann = [[MKPointAnnotation alloc]init];
+        ann.coordinate = coords;
+        [self.mapView addAnnotation:ann];
+    }
 }
 
 - (void)didReceiveMemoryWarning
