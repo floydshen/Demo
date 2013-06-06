@@ -1,4 +1,4 @@
 platform :ios
-pod 'JSONKit',       '~> 1.4'
-pod 'Reachability',  '~> 3.0.0'
-
+pod 'AALaunchTransition'
+pod 'A2DynamicDelegate'
+pod 'ABMultiton'
