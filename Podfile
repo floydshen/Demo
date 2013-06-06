@@ -1,4 +1,5 @@
-platform :ios
+platform :ios, '6.1'
 pod 'AALaunchTransition'
 pod 'A2DynamicDelegate'
 pod 'ABMultiton'
+pod 'ADiOSUtilities'
