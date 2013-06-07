@@ -24,3 +24,6 @@ profile
 Podfile.lock
 Pods/
 
+Demo.xcworkspace
+
+
